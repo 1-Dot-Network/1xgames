@@ -12,7 +12,7 @@ function newGame(icon, name) {
     newGame.append(newGame.name)
     newGame.append(newGame.icon)
     newGame.addEventListener('click', () => {
-        window.location = ('/' +  'games' + '/' + 'gamepage' + '/' + name + '.html')
+        window.location = ('/' +  'games' + '/' + 'gamepages' + '/' + name + '.html')
     })
     newGame.style.width = '8%'
     newGame.style.height = '20%'
