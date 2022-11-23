@@ -12,7 +12,7 @@ function newGame(icon, name) {
     newGame.append(newGame.name)
     newGame.append(newGame.icon)
     newGame.addEventListener('click', () => {
-        window.location = ('/' + name + '.html')
+        window.location = ('/' + 'gamepage' + '/' + name + '.html')
     })
     newGame.style.width = '8%'
     newGame.style.height = '20%'
@@ -21,7 +21,7 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 
-newGame('./gameFiles/Bitlife.png', 'Bitlife')
+newGame('./gameFiles/2048.png', '')
 
 for (let i = 0; i < gameArr.length; i++) {
     var int
