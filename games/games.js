@@ -21,16 +21,16 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 
-newGame('./gameFiles/coreball.png', 'Coreball')
-newGame('./gameFiles/coreball.png', 'Basketball stars')
-newGame('./gameFiles/coreball.png', 'Bloonstd')
-newGame('./gameFiles/coreball.png', 'Cookie Clicker')
+newGame('./gameFiles/Core Ball.png', 'Coreball')
+newGame('./gameFiles/Basketball Stars.png', 'Basketball stars')
+newGame('./gameFiles/Bloons TD.jpg', 'Bloonstd')
+newGame('./gameFiles/Cookie Clicker.png', 'Cookie Clicker')
 newGame('./gameFiles/coreball.png', 'Doge Miner')
-newGame('./gameFiles/coreball.png', 'Drive Mad')
-newGame('./gameFiles/coreball.png', 'Motox3m Pool Party')
-newGame('./gameFiles/coreball.png', 'Motox3m Spooky')
-newGame('./gameFiles/coreball.png', 'Paperio2')
-newGame('./gameFiles/coreball.png', 'Runaway Dog 2')
+newGame('./gameFiles/Drive Mad.jpg', 'Drive Mad')
+newGame('./gameFiles/MOTO X3M POOL.jpg', 'Motox3m Pool Party')
+newGame('./gameFiles/MOTO X3M SPOOKY.jpeg', 'Motox3m Spooky')
+newGame('./gameFiles/PaperIO 2.png', 'Paperio2')
+newGame('./gameFiles/Runaway Dog 2.png', 'Runaway Dog 2')
 for (let i = 0; i < gameArr.length; i++) {
     var int
     var splitName = gameArr[i].name.innerText.split('')
