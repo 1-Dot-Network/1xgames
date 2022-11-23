@@ -21,7 +21,7 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 
-newGame('./gameFiles/2048.png', '')
+newGame('./gameFiles/coreball.png', '')
 
 for (let i = 0; i < gameArr.length; i++) {
     var int
