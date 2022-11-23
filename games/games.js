@@ -14,32 +14,30 @@ function newGame(icon, name) {
     newGame.addEventListener('click', () => {
         window.location = ('/' +  'games' + '/' + 'gamepages' + '/' + name + '.html')
     })
-    newGame.style.width = '8%'
-    newGame.style.height = '25%'
+    newGame.style.width = '9%'
+    newGame.style.height = '30%'
     newGame.style.position = 'absolute'
     gameDiv.append(newGame)
     gameArr.push(newGame)
 }
 
-newGame('./gameFiles/Core Ball.png', 'Coreball')
-newGame('./gameFiles/Basketball Stars.png', 'Basketball stars')
-newGame('./gameFiles/Bloons TD.jpg', 'Bloonstd')
-newGame('./gameFiles/Cookie Clicker.png', 'Cookie Clicker')
-newGame('./gameFiles/dogeminer.png', 'Doge Miner')
-newGame('./gameFiles/Drive Mad.jpg', 'Drive Mad')
-newGame('./gameFiles/MOTO X3M POOL.jpg', 'Motox3m Pool Party')
-newGame('./gameFiles/MOTO X3M SPOOKY.jpeg', 'Motox3m Spooky')
-newGame('./gameFiles/PaperIO 2.png', 'Paperio2')
-newGame('./gameFiles/Runaway Dog 2.png', 'Runaway Dog 2')
+newGame('./gameFiles/coreball.png', 'Coreball')
 
+for (let i = 0; i < gameArr.length; i++) {
+    var int
+    var splitName = gameArr[i].name.innerText.split('')
+    if (splitName.length > 5) int = 0.01; else int = 0.9
+    gameArr[i].name.style.fontSize = (splitName.length / (splitName.length * (splitName.length * 0.075)) - int).toString() + "vmax"
+    gameArr[i].name.style.left = ""
+}
 
 var rowsTop = {
-    1: '10%',
-    2: '38%',
+    1: '2%',
+    2: '24%',
     3: '46%',
-    4: '58%',
-    5: '100%',
-    6: '122%'
+    4: '68%',
+    5: '90%',
+    6: '112%'
 }
 for (let i = 0; i < gameArr.length; i++) {
     // y pos
