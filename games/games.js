@@ -22,7 +22,15 @@ function newGame(icon, name) {
 }
 
 newGame('./gameFiles/coreball.png', 'Coreball')
-
+newGame('./gameFiles/coreball.png', 'Basketball stars')
+newGame('./gameFiles/coreball.png', 'Bloonstd')
+newGame('./gameFiles/coreball.png', 'Cookie Clicker')
+newGame('./gameFiles/coreball.png', 'Doge Miner')
+newGame('./gameFiles/coreball.png', 'Drive Mad')
+newGame('./gameFiles/coreball.png', 'Motox3m Pool Party')
+newGame('./gameFiles/coreball.png', 'Motox3m Spooky')
+newGame('./gameFiles/coreball.png', 'Paperio2')
+newGame('./gameFiles/coreball.png', 'Runaway Dog 2')
 for (let i = 0; i < gameArr.length; i++) {
     var int
     var splitName = gameArr[i].name.innerText.split('')
