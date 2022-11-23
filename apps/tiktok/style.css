@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.server {
+    background-color: rgba(35, 35, 35, 0.566);
+    position: absolute;
+    top: 0%;
+    left: 42%;
+    width: fit-content;
+    height:fit-content;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px;
+    transition-duration: 100ms;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.server:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px grey;
+}
+.server:active {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 5px grey;
+}
+.server #Title {
+    color: white;
+    font-size: 2.5vmax;
+}
+.server #Content {
+    color: grey;
+    font-size: 1vmax;
+}

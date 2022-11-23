@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.notification {
+    background-color: rgba(35, 35, 35, 0.566);
+    position: absolute;
+    top: 0%;
+    left: 39.25%;
+    width: 20%;
+    height: 9%;
+    margin-bottom: 5%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px;
+    transition-duration: 100ms;
+
+}
+.notification:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px grey;
+}
+.notification #Title {
+    color: white;
+    font-size: 1.5vmax;
+}
+.notification #Content {
+    color: grey;
+    font-size: 1vmax;
+}
