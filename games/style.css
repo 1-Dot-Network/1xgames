@@ -59,9 +59,9 @@ body {
     overflow-y: scroll;
 }
 .game{
-    background-color: rgba(35, 35, 35, 0.566);
+    background-color: rgba(35, 35, 35, 0);
     font-family: 'Ubuntu', sans-serif;
-    border-radius: 25px;
+    border-radius: 0px;
     transition-duration: 100ms;
     cursor: pointer;
 }
@@ -74,18 +74,18 @@ body {
     box-shadow: 0px 0px 5px grey;
 }
 .game img {
-    width: 6vw;
-    height: 10vh;
+    width: 7.9vw;
+    height: 16vh;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 0%;
+    left: 0%;
     z-index: 1;
 }
 .game div {
     position: absolute;
     top: 70%;
-    left: 15%;
     font-size: 1.5vmax;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
     color: white;
 }
