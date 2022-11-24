@@ -9,23 +9,18 @@ function newServer(Title) {
     newServer.Title.innerText = Title
     newServer.append(newServer.Title)
     newServer.addEventListener('click', () => {
-        window.location = page + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '.html'
+        window.location = './servers/' + 'server1.html'
     })
-    let page = './' + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '/'
     serverDiv.append(newServer)
     serverArr.push(newServer)
 }
 
-newServer('Geforce Now')
-newServer('Discord')
-newServer('Live TV')
-newServer('World Cup')
-newServer('Movies')
+newServer('I Understand')
 
 setInterval(() => {
     for (let i = 0; i < serverArr.length; i++) {
         if (i !== 0) {
             serverArr[i].style.top = (i * 15 + 20).toString() + "%"
-        } else serverArr[i].style.top = "20%"
+        } else serverArr[i].style.top = "40%"
     }
-}, 100) 
+}, 100)
