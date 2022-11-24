@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFMEBK4WNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RFMEBK4WNL');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +19,6 @@
     <link rel="stylesheet" href="style.css">
     <title>1xGame</title>
     <link rel="icon" type="image/x-icon" href="/images/1xgames.png">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFMEBK4WNL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RFMEBK4WNL');
-</script>
 </head>
 
 <body>
@@ -42,6 +41,7 @@
     height: 7%;
     background-color: #0e0e0e9b ;
     transition-duration: 100ms;
+    z-index: 1;
     ">
         <div id="navbarTitle" style="
         font-family: 'Ubuntu', sans-serif;
@@ -53,6 +53,46 @@
         left: 0.5%;
         top: 10%;
         ">1xGames</div>
+
+        <div id="changelog" style="
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        position: absolute;
+        font-size: 2vmax;
+        transition-duration: 100ms;
+        cursor: pointer;
+        left: 75%;
+        top: 10%;">Changelog <img src="./images/arrow.png" style="transform: scale(0.1); position: absolute; top: -300%; left: 25%; transition-duration: 100ms;"></div>
+        <div id="credits" style="
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        position: absolute;
+        font-size: 2vmax;
+        transition-duration: 100ms;
+        cursor: pointer;
+        left: 88%;
+        top: 10%;">Credits <img src="./images/arrow.png" style="transform: scale(0.1); position: absolute; top: -300%; left: -10%; transition-duration: 100ms;"></div>
+
+        <script>
+            var isActive = false
+            var isActive1 = false
+            const credits = document.getElementById('credits')
+            const changelog = document.getElementById('changelog')
+            const credArrow = credits.firstElementChild
+            const changeArrow = changelog.firstElementChild
+
+            credits.addEventListener('click', () => {
+                if (!isActive && !isActive1) isActive = true; else isActive = false
+            })
+            changelog.addEventListener('click', () => {
+                if (!isActive1 && !isActive) isActive1 = true; else isActive1 = false
+            })
+
+            setInterval(() => {
+                if(isActive) { credArrow.style.rotate = "180deg" } else { credArrow.style.rotate = "0deg" }
+                if(isActive1) { changeArrow.style.rotate = "180deg" } else { changeArrow.style.rotate = "0deg" }
+            })
+        </script>
         <style>
             #navbarTitle:hover {
                 transform: scale(1.1);
@@ -60,6 +100,22 @@
             }
 
             #navbarTitle:active {
+                transform: scale(0.9);
+                text-shadow: 0px 0px 10px;
+            }
+            #changelog:hover {
+                transform: scale(1.1);
+                text-shadow: -5px 5px 10px;
+            }
+            #changelog:active {
+                transform: scale(0.9);
+                text-shadow: 0px 0px 10px;
+            }
+            #credits:hover {
+                transform: scale(1.1);
+                text-shadow: -5px 5px 10px;
+            }
+            #credits:active {
                 transform: scale(0.9);
                 text-shadow: 0px 0px 10px;
             }
@@ -81,6 +137,7 @@
             #arrowToggle:hover {
                 background-color: #292929d1;
             }
+
             #arrowToggle:active {
                 background-color: #0e0e0e9b;
             }
@@ -107,23 +164,201 @@
         font-family: 'Ubuntu', sans-serif;
         color: white;
         position: absolute;
-        top: 34%;
-        left: 42%;
+        top: 35%;
+        left: 40%;
         font-size: 4vmax;
         ">1xGames</div>
         <div id="buttons">
-            <div id="gamesBtn" class="mainBtn" style="left: 33%; top: 58%;"" onclick="window.location = '/games/index.html'">Games</div>
-            <div id="proxiesBtn" class="mainBtn" style="left:46%; top: 58%;" onclick="window.location = '/proxies/index.html'">
+            <div id="gamesBtn" class="mainBtn" style="left: 31%; top: 54%;" onclick="
+                window.location='/games/index.html'">Games</div>
+            <div id=" proxiesBtn" class="mainBtn" style="left:44%; top: 54%;"
+                onclick="window.location = '/proxies/index.html'">
                 Proxies</div>
-                <div id="appsBtn" class="mainBtn" style="left:60%; top: 58%;" onclick="window.location = '/apps/index.html'">
-                    Apps</div>
-                <div id="changelogBtn" class="mainBtn" style="left: 28.5%; top: 69%;"
-                    onclick="window.location = '/Changelog/index.html'">Changelog</div>
-                <div id="appsBtn" class="mainBtn" style="left:43%; top: 69%;" onclick="window.location = '/backups/index.html'">
-                    Backup Links</div>
-                <div id="changelogBtn" class="mainBtn" style="left: 60%; top: 69%;"
+            <div id="appsBtn" class="mainBtn" style="left:58%; top: 54%;"
+                onclick="window.location = '/apps/index.html'">
+                Apps</div>
+            <div id="settingsBtn" class="mainBtn" style="left: 28.5%; top: 66%;"
+                onclick="window.location = '/settings/index.html'">Settings</div>
+            <div id="appsBtn" class="mainBtn" style="left:41%; top: 66%;"
+                onclick="window.location = '/backups/index.html'">
+                Backup Links</div>
+            <div id="changelogBtn" class="mainBtn" style="left: 58%; top: 66%;"
                 onclick="window.location = '/Feedback/index.html'">Feedback</div>
         </div>
+        <div id="notificationsContainer">
+            <div id="notifications" style="
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            left: 70%;
+            overflow-y: scroll;
+            ">
+
+            </div>
+        </div>
+        <script>
+            const notis = document.getElementById('notifications')
+
+            setInterval(() => {
+                if (isActive1) {
+                    for (let i = 0; i < notiArr.length; i++) {
+                        if (i !== 0) {
+                            notiArr[i].style.top = (i * 15 + 10).toString() + "%"
+                        } else notiArr[i].style.top = "10%"
+                    }
+                    notis.style.overflowY = "scroll"
+                } else {
+                    for (let i = 0; i < notiArr.length; i++) {
+                        if (i !== 0) {
+                            notiArr[i].style.top = (-45).toString() + "%"
+                        } else notiArr[i].style.top = "-45%"
+                    }
+                    notis.style.overflowY = "hidden"
+                }
+            })
+        </script>
+        <style>
+            ::-webkit-scrollbar {
+                width: 20px;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 1px grey;
+                border-radius: 5px;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background-color: rgba(156, 156, 156, 0.408);
+                border-radius: 10px;
+                transition-duration: 100ms;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: rgba(237, 237, 237, 0.408);
+            }
+
+            ::-webkit-scrollbar-thumb:active {
+                background-color: rgba(156, 156, 156, 0.408);
+            }
+        </style>
+        <script>
+            var notiArr = []
+            var notiDiv = document.getElementById('notifications')
+
+            function newNoti(Title, Content) {
+                var newNoti = document.createElement('div')
+                newNoti.setAttribute('class', 'notification')
+                newNoti.Title = document.createElement('div')
+                newNoti.Title.setAttribute('id', 'Title')
+                newNoti.Title.innerText = Title
+                newNoti.append(newNoti.Title)
+                newNoti.Content = document.createElement('div')
+                newNoti.Content.setAttribute('id', 'Content')
+                newNoti.Content.innerText = Content
+                newNoti.append(newNoti.Content)
+                notiDiv.append(newNoti)
+                notiArr.push(newNoti)
+            }
+
+            newNoti('New Site!', 'We have changed to a new website for 1xgames')
+
+            for (let i = 0; i < notiArr.length; i++) {
+                if (i !== 0) {
+                    notiArr[i].style.top = (i * 15 + 20).toString() + "%"
+                } else notiArr[i].style.top = "20%"
+            }
+        </script>
+        <style>
+            .notification {
+                background-color: rgba(35, 35, 35, 0.566);
+                position: absolute;
+                top: 0%;
+                left: 5%;
+                width: 20%;
+                height: 9%;
+                margin-bottom: 5%;
+                font-family: 'Ubuntu', sans-serif;
+                padding: 1%;
+                border-radius: 25px;
+                box-shadow: 0px 0px 0px;
+                transition-duration: 250ms;
+                z-index: 0;
+            }
+
+            .notification:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 10px grey;
+            }
+
+            .notification #Title {
+                color: white;
+                font-size: 1.5vmax;
+            }
+
+            .notification #Content {
+                color: grey;
+                font-size: 1vmax;
+            }
+        </style>
+
+        <div id="devsContainer">
+            <div id="devTxt" style="
+            font-family: 'Ubuntu', sans-serif;
+            color: rgba(166, 166, 166, 0);
+            position: absolute;
+            top: -55%;
+            left: 71.5%;
+            font-size: 1.5vmax;
+            width: 23%;
+            border: solid rgba(128, 128, 128, 0);
+            background-color: rgba(67, 67, 67, 0);
+            padding: 1%;
+            border-radius: 5%;
+            box-shadow: 0px 0px 0px white;
+            transition-duration: 500ms;
+            z-index: 0;
+            ">
+                <span style="font-size: 1.75vmax; color: transparent;">Founders:</span> <br><br>
+
+                3LLS#5515 - Moathe
+                CaptainSnow45#2882 - Jack <br><br>
+                <span style="font-size: 1.75vmax; color: transparent;">Developers:</span> <br><br>
+
+                Tomato.png#0001 - Jeremy <br><br>
+                <span style="font-size: 1.75vmax; color: transparent;">Game devs:</span> <br><br>
+
+                coolguy101#9518 - Justin <br><br>
+            </div>
+        </div>
+        <style>
+            #devTxt:hover {
+                transform: scale(1.1);
+            }
+        </style>
+        <script>
+            const item = document.getElementById("devTxt")
+            setInterval(() => {
+                if (isActive) {
+                    item.style.top = "10%"
+                    item.style.border = "solid rgba(128, 128, 128, 0.407)"
+                    item.style.backgroundColor = "rgba(67, 67, 67, 0.292)"
+                    item.style.color = "rgba(166, 166, 166)"
+                    for (let i = 0; i < item.children.length; i++) {
+                        item.children[i].style.color = "white"
+                    }
+                } else {
+                    item.style.top = "-55%"
+                    item.style.border = "solid rgba(128, 128, 128, 0)"
+                    item.style.backgroundColor = "rgba(67, 67, 67, 0)"
+                    item.style.color = "rgba(166, 166, 166, 0)"
+                    for (let i = 0; i < item.children.length; i++) {
+                        item.children[i].style.color = "transparent"
+                    }
+                }
+            })
+        </script>
     </div>
 
     <script src="./javascript/index.js"></script>

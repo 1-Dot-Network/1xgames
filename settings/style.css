@@ -1,0 +1,7 @@
+body {
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
