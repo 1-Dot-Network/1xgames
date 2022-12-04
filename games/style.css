@@ -56,14 +56,25 @@ body {
   }
 
 #games {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    text-align: center;
     overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
 }
 .game{
     background-color: rgba(35, 35, 35, 0);
     font-family: 'Ubuntu', sans-serif;
     border-radius: 10px;
-    transition-duration: 450ms;
+    transition-duration: 200ms;
     cursor: pointer;
+    display: inline-flexbox;
 }
 .game:hover {
     transform: scale(1.1);
