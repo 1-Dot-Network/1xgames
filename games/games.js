@@ -1,10 +1,42 @@
 var gameArr = []
 var gameDiv = document.getElementById('games')
 
+class row {
+    constructor(rowNum) {
+        this.rowNum = rowNum
+        this.newRow
+    }
+
+    make() {
+        var newRow = document.createElement('div')
+        newRow.style.width = "100%"
+        newRow.style.height = "20%"
+        newRow.style.display = "flex"
+        newRow.style.flexDirection = "row"
+        newRow.style.padding = '7%'
+        newRow.setAttribute('id', "row" + this.rowNum.toString())
+
+        this.newRow = newRow
+        gameDiv.append(newRow)
+    }
+}
+
+var rowArr = []
+var rowId = 0
+var rowN = 1
+rowArr.push(new row(rowN))
 function newGame(icon, name) {
+    rowId++
+    if (rowId > 9) {
+        rowId = 1
+        rowN++
+        rowArr.push(new row(rowN))
+    }
+
     var newGame = document.createElement('div')
     newGame.setAttribute('id', name)
     newGame.setAttribute('class', 'game')
+    newGame.setAttribute('data-id', rowId.toString())
     newGame.icon = document.createElement('img')
     newGame.icon.src = icon
     newGame.name = document.createElement('div')
@@ -12,12 +44,15 @@ function newGame(icon, name) {
     newGame.append(newGame.name)
     newGame.append(newGame.icon)
     newGame.addEventListener('click', () => {
-        window.location = ('/' +  'games' + '/' + 'gamepages' + '/' + name + '.html')
+        window.location = ('/' + 'games' + '/' + 'gamepages' + '/' + name + '.html')
     })
     newGame.style.width = '8%'
     newGame.style.height = '25%'
     newGame.style.position = 'absolute'
-    gameDiv.append(newGame)
+    newGame.style.left = (5 + ((rowId * 10) - 10)).toString() + '%'
+
+    //gameDiv.append(newGame)
+    //rowArr[rowN - 1].append(newGame)
     gameArr.push(newGame)
 }
 
@@ -85,102 +120,28 @@ newGame('./gameFiles/Krunker.jpg', 'Krunker')
 newGame('./gameFiles/Friday Night Funkin.png', 'Friday Night Funkin')
 newGame('./gameFiles/Rooftop Snipers.png', 'Rooftop Snipers')
 
-
-
-
-var rowsTop = {
-    1: '10%',
-    2: '38%',
-    3: '66%',
-    4: '94%',
-    5: '122%',
-    6: '150%'
+for (let h = 0; h < rowArr.length; h++) {
+    rowArr[h].make()
 }
-for (let i = 0; i < 100; i++) {
-    rowsTop[i] = ((i * 29) - 20).toString() + '%'
-}
+var rowQueries = [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+]
+
 for (let i = 0; i < gameArr.length; i++) {
-    // y pos
-    if (i <= 8) {
-        gameArr[i].style.top = rowsTop[1]
-    }
-    if (i > 8) {
-        gameArr[i].style.top = rowsTop[2]
-    }
-    if (i > 17) {
-        gameArr[i].style.top = rowsTop[3]
-    }
-    if (i > 26) {
-        gameArr[i].style.top = rowsTop[4]
-    }
-    if (i > 35) {
-        gameArr[i].style.top = rowsTop[5]
-    }
-    if (i > 44) {
-        gameArr[i].style.top = rowsTop[6]
-    }
-    if (i > 53) {
-        gameArr[i].style.top = rowsTop[7]
-    }
-    if (i > 62) {
-        gameArr[i].style.top = rowsTop[8]
-    }
-    if (i > 71) {
-        gameArr[i].style.top = rowsTop[9]
-    }
-    if (i > 80) {
-        gameArr[i].style.top = rowsTop[10]
-    }
-    if (i > 89) {
-        gameArr[i].style.top = rowsTop[11]
-    }
-    if (i > 98) {
-        gameArr[i].style.top = rowsTop[12]
-    }
-    if (i > 107) {
-        gameArr[i].style.top = rowsTop[13]
-    }
-    if (i > 116) {
-        gameArr[i].style.top = rowsTop[14]
-    }
-    if (i > 125) {
-        gameArr[i].style.top = rowsTop[15]
-    }
-    if (i > 134) {
-        gameArr[i].style.top = rowsTop[16]
-    }
-    // x pos
-    if (i <= 8) {
-        gameArr[i].style.left = (i * 10 + 5).toString() + '%'
-    }
-    if (i > 8) {
-        gameArr[i].style.left = (i * 10 + 5 - 90).toString() + '%'
-    }
-    if (i >= 18) {
-        gameArr[i].style.left = (i * 10 + 5 - 180).toString() + '%'
-    }
-    if (i >= 27) {
-        gameArr[i].style.left = (i * 10 + 5 - 270).toString() + '%'
-    }
-    if (i >= 36) {
-        gameArr[i].style.left = (i * 10 + 5 - 360).toString() + '%'
-    }
-    if (i >= 45) {
-        gameArr[i].style.left = (i * 10 + 5 - 450).toString() + '%'
-    }
-    if (i >= 54) {
-        gameArr[i].style.left = (i * 10 + 5 - 540).toString() + '%'
-    }
-    if (i >= 63) {
-        gameArr[i].style.left = (i * 10 + 5 - 630).toString() + '%'
-    }
-    if (i >= 72) {
-        gameArr[i].style.left = (i * 10 + 5 - 720).toString() + '%'
-    }
-    if (i >= 81) {
-        gameArr[i].style.left = (i * 10 + 5 - 810).toString() + '%'
-    }
-    if(i >= 90) {
-        gameArr[i].style.left = (i * 10 + 5 - 900).toString() + '%'
+    var gameId = parseInt(gameArr[i].getAttribute('data-id'))
+    rowQueries[gameId - 1].push(gameArr[i])
+}
+
+for (let j = 0; j < rowQueries.length; j++) {
+    for (let k = 0; k < rowQueries[j].length; k++) {
+        rowArr[k].newRow.append(rowQueries[j][k])
     }
 }
