@@ -21,7 +21,7 @@
 
 <body>
 
-    <canvas id="canvas" height="901" width="368"></canvas>
+    <canvas id="canvas" height="901" width="368" style="z-index: 1;"></canvas>
     <script>
         const canvas = document.getElementById('canvas')
         canvas.width = window.innerWidth
@@ -101,7 +101,7 @@
         </script>
     </div>
 
-    <div id="centerContainer">
+    <div id="centerContainer" style="z-index: 0;">
         <div id="Title" style="
         position: absolute;
         top: 0;
