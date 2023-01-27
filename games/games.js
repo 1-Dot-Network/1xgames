@@ -46,8 +46,8 @@ function newGame(icon, name) {
     newGame.addEventListener('click', () => {
         window.location = ('/' + 'games' + '/' + 'gamepages' + '/' + name + '/' + 'index.html')
     })
-    newGame.style.width = '8%'
-    newGame.style.height = '25%'
+    newGame.style.width = '16%'
+    newGame.style.height = '50%'
     newGame.style.position = 'absolute'
     newGame.style.left = (5 + ((rowId * 10) - 10)).toString() + '%'
 
