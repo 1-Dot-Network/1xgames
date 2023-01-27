@@ -56,7 +56,6 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 newGame('./gameFiles/Retro B0wl.png', 'RetroB0wl')
-newGame('./gameFiles/Slope.jpeg', 'Slope')
 newGame('./gameFiles/Core ball.png', 'Coreball')
 newGame('./gameFiles/Drive Mad.jpg', 'drive mad')
 newGame('./gameFiles/Basketball Stars.png', 'Basketball Stars')
@@ -105,6 +104,7 @@ newGame('./gameFiles/Smash Karts.png', 'Smash Karts')
 newGame('./gameFiles/Toon Cup.jpg', 'Toon Cup')
 newGame('./gameFiles/Idle Breakout.png', 'Idle Breakout')
 newGame('./gameFiles/Shell Shockers.jpg', 'Shell Shockers')
+newGame('./gameFiles/Slope.jpeg', 'Slope')
 
 
 
