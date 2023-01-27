@@ -16,7 +16,7 @@ function newNoti(Title, Content) {
     notiArr.push(newNoti)
 }
 
-newNoti('New Site!', 'We have changed to a new website for 1xgames')
+newNoti('New Site!', 'We have changed to a new website for 1xGames')
 
 
 setInterval(() => {
