@@ -47,7 +47,7 @@ function newGame(icon, name) {
         window.location = ('/' + 'games' + '/' + 'gamepages' + '/' + name + '/' + 'index.html')
     })
     newGame.style.width = '12.3%'
-    newGame.style.height = '311%'
+    newGame.style.height = '31.1%'
     newGame.style.position = 'absolute'
     newGame.style.left = (5 + ((rowId * 10) - 10)).toString() + '%'
 
