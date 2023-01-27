@@ -59,6 +59,7 @@ newGame('./gameFiles/Retro B0wl.png', 'RetroB0wl')
 newGame('./gameFiles/Core ball.png', 'Coreball')
 newGame('./gameFiles/Drive Mad.jpg', 'drive mad')
 newGame('./gameFiles/Basketball Stars.png', 'Basketball Stars')
+newGame('./gameFiles/Slope.jpeg', 'Slope')
 newGame('./gameFiles/Bitlife.png', 'Bitlife')
 newGame('./gameFiles/Vex 3.png', 'Vex3')
 newGame('./gameFiles/Vex 4.png', 'Vex4')
@@ -104,7 +105,6 @@ newGame('./gameFiles/Smash Karts.png', 'Smash Karts')
 newGame('./gameFiles/Toon Cup.jpg', 'Toon Cup')
 newGame('./gameFiles/Idle Breakout.png', 'Idle Breakout')
 newGame('./gameFiles/Shell Shockers.jpg', 'Shell Shockers')
-newGame('./gameFiles/Slope.jpeg', 'Slope')
 
 
 
