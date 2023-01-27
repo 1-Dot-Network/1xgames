@@ -57,7 +57,7 @@ function newGame(icon, name) {
 }
 newGame('./gameFiles/Retro B0wl.png', 'RetroB0wl')
 newGame('./gameFiles/Core Ball.png', 'Core Ball')
-newGame('./gameFiles/Drive Mad.jpg', 'drive mad')
+newGame('./gameFiles/Drive Mad.jpg', 'Drive Mad')
 newGame('./gameFiles/Basketball Stars.png', 'Basketball Stars')
 newGame('./gameFiles/Slope.jpeg', 'Slope')
 newGame('./gameFiles/Bitlife.png', 'Bitlife')
