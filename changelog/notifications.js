@@ -16,7 +16,7 @@ function newNoti(Title, Content) {
     notiArr.push(newNoti)
 }
 
-newNoti('New Site!', 'We have changed to a new website for 1xGames')
+newNoti('New Site!', 'We appreciate everyone that goes on 1xGames daily! We have hit a million visits. We deeply apolagize if any progress is lost but its for a good cause as 1xGames is now going through a huge')
 
 
 setInterval(() => {
