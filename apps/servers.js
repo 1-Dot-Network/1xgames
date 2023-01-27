@@ -21,6 +21,7 @@ newServer('Discord')
 newServer('Live TV')
 newServer('World Cup')
 newServer('Movies')
+newServer('Spotify')
 
 setInterval(() => {
     for (let i = 0; i < serverArr.length; i++) {
