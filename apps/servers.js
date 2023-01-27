@@ -16,10 +16,6 @@ function newServer(Title) {
     serverArr.push(newServer)
 }
 
-newServer('Geforce Now')
-newServer('Discord')
-newServer('Live TV')
-newServer('World Cup')
 newServer('Movies')
 newServer('Spotify')
 
