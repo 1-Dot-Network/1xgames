@@ -55,7 +55,7 @@ function newGame(icon, name) {
     //rowArr[rowN - 1].append(newGame)
     gameArr.push(newGame)
 }
-newGame('./gameFiles/Retro B0wl.png', 'RetroB0wl')
+newGame('./gameFiles/Retro B0wl.png', 'Retro B0wl')
 newGame('./gameFiles/Core Ball.png', 'Core Ball')
 newGame('./gameFiles/Drive Mad.jpg', 'Drive Mad')
 newGame('./gameFiles/Basketball Stars.png', 'Basketball Stars')
