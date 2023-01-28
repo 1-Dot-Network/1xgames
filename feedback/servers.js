@@ -8,10 +8,10 @@ function newServer(Title) {
     newServer.Title.setAttribute('id', 'Title')
     newServer.Title.innerText = Title
     newServer.append(newServer.Title)
+    let page = './' + Title + '/' + Title + '.html'
     newServer.addEventListener('click', () => {
-        window.location = page + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '.html'
+        window.location = page
     })
-    let page = './' + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '/'
     serverDiv.append(newServer)
     serverArr.push(newServer)
 }
