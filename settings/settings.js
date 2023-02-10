@@ -1,10 +1,19 @@
 const settingsContainer = document.getElementById('row1')
 
-function newSetting(name) {
+function newSetting(name, options) {
     var setting = document.createElement('div')
+    var optionId = 0
+    var optionLength = options.length
     setting.setAttribute('class', 'setting')
-    setting.innerText = name
+    setInterval(() => {
+        var currentOption = options[optionId]
+        setting.innerText = name + ' : ' + currentOption
+    })
+    setting.addEventListener('click', () => {
+        optionId++
+        if (optionId === optionLength) { optionId = 0 }
+    })
     settingsContainer.append(setting)
 }
 
-newSetting('test')
+newSetting('test', ["goob", "glah"])
