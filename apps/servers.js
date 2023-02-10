@@ -9,9 +9,9 @@ function newServer(Title) {
     newServer.Title.innerText = Title
     newServer.append(newServer.Title)
     newServer.addEventListener('click', () => {
-        window.location = page + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '.html'
+        window.location = page + newServer.Title.innerText.split(' ')[0] + newServer.Title.innerText.split(' ')[1] + '.html'
     })
-    let page = './' + newServer.Title.innerText.split(' ')[0].toLowerCase() + newServer.Title.innerText.split(' ')[1] + '/'
+    let page = './' + newServer.Title.innerText.split(' ')[0] + newServer.Title.innerText.split(' ')[1] + '/'
     serverDiv.append(newServer)
     serverArr.push(newServer)
 }
