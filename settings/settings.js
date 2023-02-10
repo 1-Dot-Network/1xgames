@@ -1,4 +1,4 @@
-const settingsContainer = document.getElementById('settingsContainer')
+const settingsContainer = document.getElementById('row1')
 
 function newSetting(name) {
     var setting = document.createElement('div')
