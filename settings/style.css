@@ -5,3 +5,20 @@ body {
     user-select: none;
     -webkit-user-select: none;
 }
+
+.setting {
+    background-color: rgba(35, 35, 35, 0.566);
+    position: absolute;
+    top: 0%;
+    left: 44%;
+    width: fit-content;
+    height:fit-content;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px;
+    transition-duration: 100ms;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
