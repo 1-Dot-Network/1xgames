@@ -104,7 +104,6 @@ newGame('./gameFiles/Smash Karts.png', 'Smash Karts')
 newGame('./gameFiles/Toon Cup.jpg', 'Toon Cup')
 newGame('./gameFiles/Idle Breakout.png', 'Idle Breakout')
 newGame('./gameFiles/Shell Shockers.jpg', 'Shell Shockers')
-newGame('./gameFiles/Shell Shockers.jpg', 'Shell Shockers')
 
 
 
