@@ -14,7 +14,7 @@ function newServer(Title) {
     let page = './' + newServer.Title.innerText + '/'
     serverDiv.append(newServer)
     serverArr.push(newServer)
-}
+}//ertet
 
 newServer('Movies')
 newServer('Spotify')
