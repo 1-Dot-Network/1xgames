@@ -16,9 +16,6 @@ function newServer(Title) {
 }
 
 newServer('Server 1')
-newServer('Server 2')
-newServer('Server 3')
-newServer('Server 4')
 
 setInterval(() => {
     for (let i = 0; i < serverArr.length; i++) {

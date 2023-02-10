@@ -18,7 +18,7 @@ function newServer(Title) {
 
 newServer('Movies')
 newServer('Spotify')
-newServer('GeForce Now')
+newServer('GeForceNow')
 
 setInterval(() => {
     for (let i = 0; i < serverArr.length; i++) {

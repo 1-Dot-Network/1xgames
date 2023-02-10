@@ -30,14 +30,8 @@ function newServe(Title) {
 }
 
 newServe('Get A Private link' , 'Subscribe to are patiron to keep 1xgames alive')
-newServer('1xgame.xyz')
-newServer('1xgame.lol')
-newServer('1xgamer.ga')
-newServer('takemeto1x.ml')
-newServer('1xgames.ml')
-newServer('1xgame.ga')
-newServer('1xgame.ml')
-newServer('1xgame.cf')
+newServer('1xgame.one')
+
 setInterval(() => {
     for (let i = 0; i < serverArr.length; i++) {
         if (i !== 0) {
