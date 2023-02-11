@@ -136,17 +136,29 @@
         background-color: transparent;
         position: fixed;
         top: 0%;
-        left: 25%;
+        left: 24%;
         font-family: 'Ubuntu', sans-serif;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3vmax;
+        font-size: 2.8vmax;
         border-radius: 10%;
+        text-shadow: 0px 0px 0px;
+        transition-duration: 100ms;
         ">
         GAY MONKEY SEX
         </div>
+        <style>
+            #announcementBar:hover {
+                transform: scale(1.1);
+                text-shadow: -5px -5px 10px white;
+            }
+            #announcementBar:active {
+                transform: scale(0.9);
+                text-shadow: 0px 0px 10px white ;
+            }
+        </style>
         <!--
         <img src="./images/arrow.png" style="background-color: #0e0e0e9b;
         width: 32%;
