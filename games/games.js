@@ -107,7 +107,7 @@ newGame('./gameFiles/Glow Hockey.png', 'Glow Hockey')
 newGame('./gameFiles/Madelin Stunt 3.jpg', 'Madelin Stunt 3')
 newGame('./gameFiles/Papas Scooperia.jpg', 'Papas Scooperia')
 newGame('./gameFiles/Iron Snout.jpeg', 'Iron Snout')
-newGame('./gameFiles/DontCrash.jpg', 'Dont Crash')
+newGame('./gameFiles/Dont Crash.jpg', 'Dont Crash')
 newGame('./gameFiles/Cube Surfing.png', 'Cube Surfing')
 
 
