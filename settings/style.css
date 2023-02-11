@@ -21,4 +21,13 @@ body {
     align-items: center;
     cursor: pointer;
     color: white;
+    transition-duration: 100ms;
+}
+.setting:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px grey;
+}
+.setting:active {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 5px grey;
 }
