@@ -22,6 +22,7 @@ body {
     cursor: pointer;
     color: white;
     transition-duration: 100ms;
+    margin-bottom: 3%;
 }
 .setting:hover {
     transform: scale(1.1);
