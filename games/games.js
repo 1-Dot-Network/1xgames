@@ -109,6 +109,7 @@ newGame('./gameFiles/Papas Scooperia.jpg', 'Papas Scooperia')
 newGame('./gameFiles/Iron Snout.jpeg', 'Iron Snout')
 newGame('./gameFiles/Dont Crash.jpg', 'Dont Crash')
 newGame('./gameFiles/Cube Surfing.png', 'Cube Surfing')
+newGame('./gameFiles/Duck Life TH.png', 'Duck Life TH')
 
 
 
