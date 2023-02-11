@@ -9,12 +9,12 @@ function newSetting(name, options) {
         var currentOption = options[optionId]
         setting.innerText = name + ' : ' + currentOption
         localStorage.setItem(name, currentOption)
-        currentOption = localStorage.getItem(name)
     })
     setting.addEventListener('click', () => {
         optionId++
         if (optionId === optionLength) { optionId = 0 }
     })
+    setting.addEventListener('onload', () => { currentOption = localStorage.getItem(name) })
 
     settingsContainer.append(setting)
 }
