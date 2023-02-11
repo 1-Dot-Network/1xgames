@@ -31,6 +31,25 @@
     height: 100%;
     width: 100%;
     "></iframe>
+    <script>
+      if (window.self !== window.top) {
+        // Get the URL of the current page
+        const url = window.location.href;
+
+        // Replace the Discord webhook URL with your own
+        const webhookUrl =
+          'https://discordapp.com/api/webhooks/your/webhook/url';
+
+        // Send the URL to the Discord webhook
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ content: `This page is running inside an iframe: ${url}` }),
+        });
+      }
+    </script>
 </body>
 </html>
 
