@@ -14,6 +14,6 @@ function newSetting(name, options) {
     })
 
     settingsContainer.append(setting)
-}//sss
+}
 
 newSetting('background', ["on", "off"])
