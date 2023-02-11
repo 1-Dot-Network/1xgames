@@ -14,7 +14,7 @@ function newSetting(name, options) {
         optionId++
         if (optionId === optionLength) { optionId = 0 }
     })
-    setting.addEventListener('onload', () => { currentOption = localStorage.getItem(name) })
+    setting.addEventListener('load', () => { currentOption = localStorage.getItem(name) })
 
     settingsContainer.append(setting)
 }
