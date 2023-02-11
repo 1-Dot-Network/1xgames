@@ -32,21 +32,22 @@
     width: 100%;
     "></iframe>
       <script>
-if (window.location !== window.parent.location) {
-  const url = window.location.href;
-  const parentOrigin = new URL(document.referrer).origin;
+if (window.self !== window.top) {
+  // Get the origin of the parent window
+  const origin = new URL(document.referrer).origin;
 
   // Replace the Discord webhook URL with your own
-  const webhookUrl = 'https://discordapp.com/api/webhooks/1073779152437653574/Yn5D0VY7fB9nJrxSOW9I-BAe6cKu6jpJkmUexm5eDiDMrobBMLj6WnofNk8XrAuGR_lg';
+  const webhookUrl = 'https://discordapp.com/api/webhooks/your-webhook-url';
 
-  // Send the URL to the Discord webhook
+  // Send the origin to the Discord webhook
   fetch(webhookUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ content: `This page is running inside an iframe on ${parentOrigin}: ${url}` }),
+    body: JSON.stringify({ content: `This page is running inside an iframe of ${origin}` }),
   });
+}
     </script>
 </body>
 </html>
