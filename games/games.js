@@ -108,6 +108,7 @@ newGame('./gameFiles/Madelin Stunt 3.jpeg', 'Madelin Stunt 3')
 newGame('./gameFiles/Papas Scooperia.jpeg', 'Papas Scooperia')
 newGame('./gameFiles/Iron Snout.jpeg', 'Iron Snout')
 newGame('./gameFiles/DontCrash.jpeg', 'Dont Crash')
+newGame('./gameFiles/Cube Surfer.jpeg', 'Cube Surfing')
 
 
 
