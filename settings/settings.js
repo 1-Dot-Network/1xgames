@@ -11,7 +11,7 @@ function newSetting(name, options) {
         if (optionId === optionLength) { optionId = 0 }
         localStorage.setItem(name, options[optionId])
     })
-    setting.addEventListener('load', () => {
+    window.addEventListener('load', () => {
         setting.innerText = name + ' : ' + localStorage.getItem(name)
     })
 
