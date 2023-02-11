@@ -8,12 +8,14 @@ function newSetting(name, options) {
     setInterval(() => {
         var currentOption = options[optionId]
         setting.innerText = name + ' : ' + currentOption
+        localStorage.setItem(name, currentOption)
     })
     setting.addEventListener('click', () => {
         optionId++
         if (optionId === optionLength) { optionId = 0 }
     })
+
     settingsContainer.append(setting)
 }
 
-newSetting('test', ["goob", "glah"])
+newSetting('background', ["on", "off"])
