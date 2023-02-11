@@ -23,4 +23,4 @@ function newSetting(name, options) {
 }
 
 newSetting('Background', ["on", "off"])
-newSetting('Tab spoof', ["off", "New tab", "Google drive"])
+newSetting('Tab spoof', ["off", "New tab", "Google drive", "Classlink", "Schoology", "Google", "Google docs", "Sora", "Google classroom", "Youtube", "GoGaurdian", "Kahoot"])
