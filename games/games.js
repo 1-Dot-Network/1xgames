@@ -82,6 +82,7 @@ newGame('./gameFiles/Billiard.jpg', 'Billiard')
 newGame('./gameFiles/Super Auto Pets.png', 'Super Auto Pets')
 newGame('./gameFiles/Roblox.png', 'Roblox')
 newGame('./gameFiles/Stickman Hook.jpg', 'Stickman Hook')
+newGame('./gameFiles/Tunnel Rush.jpeg', 'Tunnel Rush')
 newGame('./gameFiles/Aquapark Slides.png', 'Aquapark Slides')
 newGame('./gameFiles/Cookie Clicker.png', 'C00kie Clicker')
 newGame('./gameFiles/Slope 3.png', 'Slope 3')
@@ -103,6 +104,11 @@ newGame('./gameFiles/Toon Cup.jpg', 'Toon Cup')
 newGame('./gameFiles/Idle Breakout.png', 'Idle Breakout')
 newGame('./gameFiles/Shell Shockers.jpg', 'Shell Shockers')
 newGame('./gameFiles/Glow Hockey.png', 'Glow Hockey')
+newGame('./gameFiles/Madelin Stunt 3.jpeg', 'Madelin Stunt 3')
+newGame('./gameFiles/Papas Scooperia.jpeg', 'Papas Scooperia')
+newGame('./gameFiles/Iron Snout.jpeg', 'Iron Snout')
+
+
 
 
 
