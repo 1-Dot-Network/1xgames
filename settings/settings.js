@@ -12,7 +12,7 @@ function newSetting(name, options) {
         localStorage.setItem(name, options[optionId])
         setting.innerText = name + ' : ' + localStorage.getItem(name)
     })
-    setInterval(() => { setting.innerText = name + ' : ' + localStorage.getItem(name) }, 5)
+    setInterval(() => { setting.innerText = name + ' : ' + options[optionId] }, 5)
 
     settingsContainer.append(setting)
 }
