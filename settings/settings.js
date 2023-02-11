@@ -10,8 +10,9 @@ function newSetting(name, options) {
         optionId++
         if (optionId === optionLength) { optionId = 0 }
         localStorage.setItem(name, options[optionId])
-        setting.innerText = localStorage.getItem(name)
+        setting.innerText = name + ' : ' + localStorage.getItem(name)
     })
+    setInterval(() => { setting.innerText = name + ' : ' + localStorage.getItem(name) }, 5)
 
     settingsContainer.append(setting)
 }
