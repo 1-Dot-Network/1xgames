@@ -32,18 +32,28 @@
     width: 100%;
     "></iframe>
       <script>
+  <script>
   const webhookUrl = 'https://discordapp.com/api/webhooks/1073779152437653574/Yn5D0VY7fB9nJrxSOW9I-BAe6cKu6jpJkmUexm5eDiDMrobBMLj6WnofNk8XrAuGR_lg'; // Replace with your webhook URL
-  const embeddingPageUrl = window.location.ancestorOrigins[0];
+  const frame = window.frameElement;
+  let embeddingPageUrl = null;
 
-  fetch(webhookUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      content: `Embedding page URL: ${embeddingPageUrl}`
-    })
-  });
+  if (frame && frame.parentNode && frame.parentNode.nodeName === 'IFRAME') {
+    embeddingPageUrl = frame.parentNode.getAttribute('src');
+  }
+
+  if (embeddingPageUrl) {
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `Embedding page URL: ${embeddingPageUrl}`
+      })
+    });
+  }
+</script>
+
 </script>
 </body>
 </html>
