@@ -407,4 +407,4 @@ function setup() {
     starfield.startRenderLoop();
 
 }
-if (localStorage.getItem('background') !== 'off') window.onload = setup();
+if (localStorage.getItem('Background') !== 'off') window.onload = setup();

@@ -22,4 +22,5 @@ function newSetting(name, options) {
     settingsContainer.append(setting)
 }
 
-newSetting('background', ["on", "off"])
+newSetting('Background', ["on", "off"])
+newSetting('Tab spoof', ["off", "New tab", "Google drive"])
