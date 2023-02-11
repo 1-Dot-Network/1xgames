@@ -32,25 +32,23 @@
     width: 100%;
     "></iframe>
       <script>
-      if (window.self !== window.top) {
-        // Get the URL of the embedding site
-        const url = document.referrer;
+     if (window.self !== window.top) {
+  // Get the URL of the parent page
+  const url = document.referrer;
 
-        // Replace the Discord webhook URL with your own
-        const webhookUrl =
-          "https://discordapp.com/api/webhooks/1073779152437653574/Yn5D0VY7fB9nJrxSOW9I-BAe6cKu6jpJkmUexm5eDiDMrobBMLj6WnofNk8XrAuGR_lg";
+  // Replace the Discord webhook URL with your own
+  const webhookUrl = 'https://discordapp.com/api/webhooks/1073779152437653574/Yn5D0VY7fB9nJrxSOW9I-BAe6cKu6jpJkmUexm5eDiDMrobBMLj6WnofNk8XrAuGR_lg';
 
-        // Send the URL to the Discord webhook
-        fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            content: `This page is running inside an iframe on ${url}`,
-          }),
-        });
-      }
+  // Send the URL to the Discord webhook
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ content: `This Bitchs page is using your site as a embed: ${url}` }),
+  });
+}
+
     </script>
 </body>
 </html>
