@@ -5,16 +5,15 @@ function newSetting(name, options) {
     var optionId = 0
     var optionLength = options.length
     setting.setAttribute('class', 'setting')
+    setting.innerText = name + ' : ' + options[optionId]
     setInterval(() => {
-        var currentOption = options[optionId]
-        setting.innerText = name + ' : ' + currentOption
-        localStorage.setItem(name, currentOption)
+        setting.innerText = name + ' : ' + localStorage.getItem(name)
     })
     setting.addEventListener('click', () => {
         optionId++
         if (optionId === optionLength) { optionId = 0 }
+        localStorage.setItem(name, options[optionId])
     })
-    setting.addEventListener('load', () => { currentOption = localStorage.getItem(name) })
 
     settingsContainer.append(setting)
 }
