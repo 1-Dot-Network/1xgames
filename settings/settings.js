@@ -25,7 +25,7 @@ function newSetting(name, options) {
 }
 
 newSetting('Background', ["on", "off"])
-newSetting('Tab spoof', ["off", "New tab", "Google drive", "Classlink", "Schoology", "Google", "Google docs", "Sora", "Google classroom", "Youtube", "GoGaurdian", "Kahoot"])
+newSetting('Tab Spoof', ["off", "New tab", "Google drive", "Classlink", "Schoology", "Google", "Google docs", "Sora", "Google classroom", "Youtube", "GoGaurdian", "Kahoot"])
 
 for (let i = 0; i < settings.length; i++) {
     if (settings[i].innerText.split(' ')[2] === undefined) {
