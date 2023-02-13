@@ -28,6 +28,46 @@
 </iframe>
 
 <script>function loadGapi(){var loaderScript=document.createElement('script');loaderScript.setAttribute('src','https://apis.google.com/js/api.js?checkCookie=1');loaderScript.onload=function(){this.onload=function(){};loadGapiClient();};loaderScript.onreadystatechange=function(){if(this.readyState==='complete'){this.onload();}};(document.head||document.body||document.documentElement).appendChild(loaderScript);}function updateInnerFrame(url,enableInteraction,forceIosScrolling){var urlEl=document.createElement('a');urlEl.setAttribute('href',url);if(urlEl.protocol!="https:"&&urlEl.protocol!="http:"){return;}var iframe=document.getElementById('innerFrame');iframe.src=url;iframe.onload=function(){gapi.rpc.call('..','innerFrameLoaded');};if(enableInteraction){if(forceIosScrolling){var iframeParent=iframe.parentElement;iframeParent.classList.add('forceIosScrolling');}else{iframe.style.overflow='auto';}}else{iframe.style.pointerEvents='none';}}function updateInnerIframeCode(userCode,enableInteraction,forceIosScrolling){gapi.rpc.setup('innerFrame');gapi.rpc.call('innerFrame','updateUserHtmlFrame',undefined,userCode,enableInteraction,forceIosScrolling);}function onPostMessage(ev){if(ev.data['magic']!='SHIC'){return;}var type=ev.data['type'];switch(type){case'resize':var height=ev.data['height'];gapi.rpc.call('..','resize',undefined,height);}}function onGapiInitialized(){gapi.rpc.call('..','gapiInitialized');gapi.rpc.register('updateInnerFrame',updateInnerFrame);gapi.rpc.register('updateInnerIframeCode',updateInnerIframeCode);window.addEventListener('message',onPostMessage);}function loadGapiClient(){gapi.load('gapi.rpc',onGapiInitialized);}if(document.readyState=='complete'){loadGapi();}else{self.addEventListener('load',loadGapi);}</script>
+<script>
+    switch (localStorage.getItem('Tab Spoof')) {
+        case 'Off':
+            document.title = 'PUT PAGE NAME HERE'
+            break
+        case 'New tab':
+            document.title = 'New Tab'
+            break
+        case 'Google drive':
+            document.title = 'Google Drive'
+            break
+        case 'Classlink':
+            document.title = 'Classlink'
+            break
+        case 'Schoology':
+            document.title = 'Home | Schoology'
+            break
+        case 'Google':
+            document.title = 'Google'
+            break
+        case 'Google docs':
+            document.title = 'Google Docs'
+            break
+        case 'Sora':
+            document.title = 'Sora'
+            break
+        case 'Google classroom':
+            document.title = 'Google Classroom'
+            break
+        case 'YouTube':
+            document.title = 'YouTube'
+            break
+        case 'GoGaurdian':
+            document.title = 'blocked.gogauardian.com/?ctx=fashgflhksgafabskjkhwebjkbssafashkfdbkebljkhgbfhjklbvahjlfgajhsfgjasjgfjhasvghkjfashkfbjghasvfjklhashjcgasjkhfghjkasvfhjasvghfgyjasbfhjasvjkfashjvfghjasvfghjasvfhjgkasjhkfvghasjvfjhasvfjv'
+            break
+        case 'Kahoot':
+            document.title = 'Kahoot'
+            break
+    }
+</script>
 </body>
 </html>
 
