@@ -57,6 +57,7 @@ function newGame(icon, name) {
 }
 newGame('./gameFiles/Crossy Road.png', 'Crossy Road')
 newGame('./gameFiles/weddle.jpg', 'Weddle')
+newGame('./gameFiles/vollyrandom.png', 'Volley Random')
 
 
 
