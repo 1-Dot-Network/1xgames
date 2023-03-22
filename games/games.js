@@ -56,6 +56,8 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 newGame('./gameFiles/Crossy Road.png', 'Crossy Road')
+newGame('./gameFiles/Crossy Road.png', 'Crossy Road')
+
 
 
 
