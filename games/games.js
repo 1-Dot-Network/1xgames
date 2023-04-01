@@ -61,6 +61,7 @@ newGame('./gameFiles/vollyrandom.png', 'Volley Random')
 newGame('./gameFiles/Boxing Random.jpg', 'Boxing Random')
 newGame('./gameFiles/Basket Random.png', 'Basket Random')
 newGame('./gameFiles/1v1lol.png', '1v1lol')
+newGame('./gameFiles/Jetpack Joyride.jpg', 'Jetpack Joyride')
 newGame('./gameFiles/Justfall.png', 'JustFall')
 
 
